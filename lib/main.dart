@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
         body: GradientContainer()
       ),
@@ -13,6 +13,8 @@ void main() {
 
 
 class GradientContainer extends StatelessWidget {
+const GradientContainer({super.key});
+
 @override
 Widget build(context){
   return Container(
@@ -64,3 +66,4 @@ Widget build(context){
 /// 21. The `build` method is overridden to define the UI of the `GradientContainer`.
 /// 22. The `build` method returns a `Container` widget with the gradient background and centered text.
 /// 23. The GradientContainer widget is then used as the body of the `Scaffold` in the `MaterialApp`.
+/// 24. super.key is passed to the constructor of the `StatelessWidget` to allow for proper key handling in Flutter's widget tree.
