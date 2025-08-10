@@ -5,31 +5,36 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.blue, Colors.green],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: Center(
-            child: Text(
-              'Hello, World!',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
+        body: GradientContainer()
       ),
     ),
   );
 }
 
 
-
+class GradientContainer extends StatelessWidget {
+@override
+Widget build(context){
+  return Container(
+    decoration: BoxDecoration(
+      gradient: LinearGradient(
+        colors: [Colors.blue, Colors.green],
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+      ),
+    ),
+    child: Center(
+      child: Text(
+        'Hello, World!',
+        style: TextStyle(
+          fontSize: 24,
+          color: Colors.white,
+        ),
+      ),
+    ),
+  );
+}
+}
 
 /// STEP BY STEP NOTES ON THE CODE AS I AM WRITING IT
 /// 1. runApp(); which is the entry point of the Flutter application was first written
@@ -55,3 +60,7 @@ void main() {
 /// 17. The next step is to define the `begin` and `end` properties of the `LinearGradient`, which specify the direction of the gradient.
 /// 18. For the style of the text, we will use the `TextStyle` widget to set the font size and color.
 /// 19. The `TextStyle` widget is initialized with a `fontSize` of 24 and a `color` of `Colors.white`, which will make the text larger and white
+/// 20. The GradientContainer widget is created as a `StatelessWidget`, which means it does not maintain any state.
+/// 21. The `build` method is overridden to define the UI of the `GradientContainer`.
+/// 22. The `build` method returns a `Container` widget with the gradient background and centered text.
+/// 23. The GradientContainer widget is then used as the body of the `Scaffold` in the `MaterialApp`.
