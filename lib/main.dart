@@ -3,10 +3,25 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello, World!'),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blue, Colors.green],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: Center(
+            child: Text(
+              'Hello, World!',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+              ),
+            ),
+          ),
         ),
       ),
     ),
@@ -32,4 +47,11 @@ void main() {
 /// 10. The `Scaffold` widget's body is set to the `Text` widget, which will display 'Hello, World!' in the center of the screen when the app is run.
 /// 11. The `Center` widget is used to center the `Text` widget within the `Scaffold`, ensuring that the text appears in the middle of the screen.
 /// 12. The child of the `Center` widget is the `Text` widget, which is the only visible element in the app's UI at this point.
-/// 
+/// 13. The next step is to add a `Container` widget as the body of the `Scaffold`, which will allow us to apply a background decoration.
+///     The `Container` widget is used to create a rectangular area that can have a background color, padding, margin, and other properties.
+/// 14. The `decoration` property of the `Container` is set to a `BoxDecoration`, which allows us to define the background gradient.
+/// 15. The `BoxDecoration` is initialized with a `LinearGradient`, which creates a gradient effect for the background.
+/// 16. The `colors` property of the `LinearGradient` is set to a list of colors, specifically `Colors.blue` and `Colors.green`, which will create a gradient from blue to green.
+/// 17. The next step is to define the `begin` and `end` properties of the `LinearGradient`, which specify the direction of the gradient.
+/// 18. For the style of the text, we will use the `TextStyle` widget to set the font size and color.
+/// 19. The `TextStyle` widget is initialized with a `fontSize` of 24 and a `color` of `Colors.white`, which will make the text larger and white
