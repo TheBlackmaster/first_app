@@ -1,6 +1,6 @@
 // Starting from the very beginning
 import 'package:flutter/material.dart';
-
+import 'package:first_app/gradient_container.dart';
 void main() {
   runApp(
     const MaterialApp(
@@ -12,31 +12,7 @@ void main() {
 }
 
 
-class GradientContainer extends StatelessWidget {
-const GradientContainer({super.key});
 
-@override
-Widget build(context){
-  return Container(
-    decoration: BoxDecoration(
-      gradient: LinearGradient(
-        colors: [Colors.blue, Colors.green],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ),
-    ),
-    child: Center(
-      child: Text(
-        'Hello, World!',
-        style: TextStyle(
-          fontSize: 24,
-          color: Colors.white,
-        ),
-      ),
-    ),
-  );
-}
-}
 
 /// STEP BY STEP NOTES ON THE CODE AS I AM WRITING IT
 /// 1. runApp(); which is the entry point of the Flutter application was first written
